@@ -23,11 +23,11 @@ class MessageController extends Controller
                 if ($number2 != 0) {
                     $result = $number1 / $number2;
                 } else {
-                    $result = 'Division by zero error';
+                    $result = '計算できません';
                 }
                 break;
             default:
-                $result = 'Invalid operator';
+                $result = '計算できません';
         }
         return view('message.calcs', [
             'number1' => $number1,
