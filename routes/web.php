@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CalcController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,4 +48,4 @@ Route::get('/view/calcs/{number1}/{operator}/{number2}', function ($number1, $op
         'result' => $result
     ]);
 });
-Route::get('/calcs/{number1}/{operator}/{number2}', [MessageController::class, 'calcs']);
+Route::get('/calcs/{number1}/{operator}/{number2}', [CalcController::class, 'result']);

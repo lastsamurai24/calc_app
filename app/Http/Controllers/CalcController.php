@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MessageController extends Controller
+class CalcController extends Controller
 {
-    public function calcs($number1, $operator, $number2,)
+    public function result($number1, $operator, $number2,)
     {
         $result = 0;
         switch ($operator) {
@@ -27,7 +27,7 @@ class MessageController extends Controller
                 }
                 break;
             default:
-                $result = '計算できません';
+                $result = '';
         }
         return view('message.calcs', [
             'number1' => $number1,
